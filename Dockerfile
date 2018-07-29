@@ -1,7 +1,12 @@
 FROM nginx:1.13.5-alpine
 RUN apk --update add openssl
-RUN mkdir -p /var/www/drafan
+COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 
+# Install app
+RUN rm -rf /var/www/*
+ADD src /var/www
+
+# Install laravel
 FROM php:fpm
 
 RUN apt-get update \
