@@ -27,6 +27,17 @@
 
             </div>
         </div>
+        <div class="container">
+            <div class="hero-unit">
+                <h1>Get Env</h1>
+                <?php
+                    echo "BUCKET_NAME is".getenv("BUCKET_NAME");
+                    echo "ENVIRONMENT_NAME is".getenv("ENVIRONMENT_NAME");
+                    echo "set env CACHE_ENDPOINT CACHE_PORT DATABASE_ENDPOINT DATABASE_USER LOAD_BALANCER_DNS"
+                ?>
+
+            </div>
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
