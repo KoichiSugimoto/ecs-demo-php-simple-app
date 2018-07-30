@@ -1,20 +1,8 @@
-FROM nginx:1.13.5-alpine
+FROM nginx:latest
 
 # ツールをインストール
-RUN apk --update add openssl \
-    && apk add --no-cache --virtual .build-deps \
-        gcc \
-        libc-dev \
-        make \
-        openssl-dev \
-        pcre-dev \
-        zlib-dev \
-        linux-headers \
-        curl \
-        gnupg \
-        libxslt-dev \
-        gd-dev \
-        geoip-dev \
+# RUN apk --update add openssl \
+
 COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Install app
