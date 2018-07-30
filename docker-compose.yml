@@ -4,6 +4,7 @@ services:
   nginx:
     # image: nginx:1.13.5-alpine
     build: ./docker/nginx
+    image: drafan/nginx
     container_name: "drafan-web"
     ports:
       - "80:80"
@@ -11,6 +12,7 @@ services:
   app:
     # image: php:fpm
     build: ./docker/app
+    image: drafan/app
     container_name: "drafan-app"
     # volumes:
     #   - ./src:/var/www:cached
