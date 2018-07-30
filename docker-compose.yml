@@ -12,9 +12,9 @@ services:
     # image: php:fpm
     build: ./docker/app
     container_name: "drafan-app"
-    volumes:
-      - ./src:/var/www:cached
-    working_dir: /var/www/drafan
+    # volumes:
+    #   - ./src:/var/www:cached
+    # working_dir: /var/www/drafan
     # logging:
     #   driver: awslogs
     #   options:
