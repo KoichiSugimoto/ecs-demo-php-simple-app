@@ -5,12 +5,15 @@ task_definition:
   task_size:
     mem_limit: 512
     cpu_limit: 256
+  services:
+    app:
+      essential: true
 run_params:
   network_configuration:
     awsvpc_configuration:
       subnets:
-        - "subnet-804858c9"
-        - "subnet-2617557d"
+        - "subnet-3560707c"
+        - "subnet-0c2b6957"
       security_groups:
-        - "sg-6f7d6a17"
+        - "sg-a19780d9"
       assign_public_ip: DISABLED

@@ -9,6 +9,12 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    # logging:
+    #   driver: awslogs
+    #   options:
+    #     awslogs-group: /ecs/cli/tutorial
+    #     awslogs-region: ap-northeast-1
+    #     awslogs-stream-prefix: drafan-nginx
   app:
     # image: php:fpm
     build: ./docker/app
@@ -22,4 +28,4 @@ services:
     #   options:
     #     awslogs-group: /ecs/cli/tutorial
     #     awslogs-region: ap-northeast-1
-    #     awslogs-stream-prefix: php-fpm
+    #     awslogs-stream-prefix: drafan-php-fpm
