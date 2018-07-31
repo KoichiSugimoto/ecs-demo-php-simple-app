@@ -3,7 +3,7 @@ FROM nginx:latest
 # ツールをインストール
 # RUN apk --update add openssl \
 
-COPY docker/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY docker/nginx/aws.default.conf /etc/nginx/conf.d/default.conf
 
 # Install app
 RUN rm -rf /var/www/*
