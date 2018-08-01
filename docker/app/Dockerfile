@@ -35,9 +35,9 @@ RUN composer global require "hirak/prestissimo" \
     && composer global require "laravel/installer"
 
 # INSTALL APP
-# RUN rm -rf /var/www/*
-# ADD src /var/www
-# VOLUME ["/var/www"]
+RUN rm -rf /var/www/*
+ADD src /var/www
+VOLUME ["/var/www"]
 WORKDIR /var/www/drafan
 
 EXPOSE 9000
