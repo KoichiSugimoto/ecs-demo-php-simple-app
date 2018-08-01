@@ -34,5 +34,8 @@ ENV PATH $PATH:/composer/vendor/bin
 RUN composer global require "hirak/prestissimo" \
     && composer global require "laravel/installer"
 
+VOLUME ["/var/www"]
+WORKDIR /var/www/drafan
+
 EXPOSE 9000
 CMD ["php-fpm"]
