@@ -31,9 +31,11 @@
             <div class="hero-unit">
                 <h1>Get Env</h1>
                 <?php
-                    echo "BUCKET_NAME is".getenv("BUCKET_NAME");
-                    echo "ENVIRONMENT_NAME is".getenv("ENVIRONMENT_NAME");
-                    echo "set env CACHE_ENDPOINT CACHE_PORT DATABASE_ENDPOINT DATABASE_USER LOAD_BALANCER_DNS"
+                    echo "<p>BUCKET_NAME is".getenv("BUCKET_NAME").'</p>';
+                    echo "<p>ENVIRONMENT_NAME is".getenv("ENVIRONMENT_NAME").'</p>';
+                    echo "<p>CACHE_ENDPOINT is".getenv("CACHE_ENDPOINT").'</p>';
+                    echo "<p>DATABASE_ENDPOINT is".getenv("DATABASE_ENDPOINT").'</p>';
+                    echo "<pre>set env CACHE_PORT DATABASE_USER LOAD_BALANCER_DNS</pre>"
                 ?>
 
             </div>
